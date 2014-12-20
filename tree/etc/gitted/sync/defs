@@ -1,0 +1,4 @@
+# definitions for gitted/sync "actual"  -*- shell-script -*-
+
+GITTED_POSTGRESQL_DATABASE=ttrss
+# export GITTED_WWW_PATH=/var/lib/tt-rss
