@@ -5,7 +5,7 @@ profile. SYSCONF is a method and tool to manage custom system files
 for easy install, backup and sync.
 
 This profile provides a [Tiny Tiny RSS](http://tt-rss.org/) service. tt-rss is a power,
-free softwaren, news reader coded in PHP.
+free-software news reader running with PHP.
 
 ## Services
 
@@ -32,7 +32,7 @@ But its dependencies:
 
 * sysconf.gitted.postgresql
   [provides import/export](https://github.com/geonef/sysconf.gitted.postgresql/tree/master/tree/etc/gitted/sync)
-  of PostgreSQL data
+  of PostgreSQL data in the ```postgresql/``` directory.
 
 
 ## Gitted integration
