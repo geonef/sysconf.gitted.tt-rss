@@ -4,14 +4,23 @@ This is a [SYSCONF](https://github.com/geonef/sysconf.base)
 profile. SYSCONF is a method and tool to manage custom system files
 for easy install, backup and sync.
 
+This profile provides a [Tiny Tiny RSS] service. tt-rss is a power,
+free softwaren, news reader coded in PHP.
 
-## PostgreSQL service
+## Services
 
-Once applied, a PostgreSQL should be running on the system:
 ```
+\# netstat -tlpn
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
+tcp        0      0 127.0.0.1:9000          0.0.0.0:*               LISTEN      21143/php-fpm.conf)
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      7799/nginx      
 tcp        0      0 0.0.0.0:5432            0.0.0.0:*               LISTEN      29057/postgres  
 tcp6       0      0 :::5432                 :::*                    LISTEN      29057/postgres  
 ```
+
+* The main service is TinyTinyRSS running on port 80.
+* You can also access the PostgreSQL service on the port 5432.
 
 
 ## Gitted import/export
