@@ -1,0 +1,15 @@
+#!/bin/bash
+
+source /etc/gitted/sync/defs
+
+GITTED_DATA_PATH=sysconf /usr/share/gitted/export/sysconf
+
+# uses: $GITTED_POSTGRESQL_DATABASE
+GITTED_DATA_PATH=postgresql \
+    /usr/share/gitted/export/postgresql
+
+GITTED_DATA_PATH=www \
+    GITTED_WORKING_TREE=$GITTED_WWW_PATH \
+    GITTED_AUTO_COMMIT=no \
+    GITTED_AUTO_ADD=no \
+    /usr/share/gitted/export/git-subtree

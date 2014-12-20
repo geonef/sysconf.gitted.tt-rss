@@ -1,0 +1,12 @@
+#!/bin/bash
+
+source /etc/gitted/sync/defs
+
+GITTED_DATA_PATH=sysconf /usr/share/gitted/import/sysconf
+
+GITTED_DATA_PATH=postgresql \
+    /usr/share/gitted/import/postgresql
+
+GITTED_DATA_PATH=www \
+    GITTED_WORKING_TREE=$GITTED_WWW_PATH \
+    /usr/share/gitted/import/git-subtree
