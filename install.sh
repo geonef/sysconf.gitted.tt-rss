@@ -37,6 +37,7 @@ else
     service php5-fpm start
 fi
 
+
 # Install Tiny Tiny RSS
 www_dir=/var/lib/tt-rss
 url=https://github.com/gothfox/Tiny-Tiny-RSS/archive/1.15.3.tar.gz
@@ -46,4 +47,15 @@ if [ ! -f $www_dir/index.php ]; then
         || nef_fatal "could not download TinyTinyRSS archive: $url"
     cd $www_dir
     chown -R www-data:www-data .
+fi
+
+if [ ! -h /etc/rc3.d/*tt-rss ]; then
+    update-rc.d tt-rss defaults
+fi
+
+# (re)Start the service through /etc/init.d/tt-rss
+if service tt-rss status >/dev/null; then
+    service tt-rss restart || nef_fatal "could not restart tt-rss"
+else
+    service tt-rss start || nef_fatal "could not start tt-rss"
 fi
