@@ -6,7 +6,7 @@
 # Install required Debian packages
 _packages=
 _packages="$_packages nginx"
-_packages="$_packages php5-fpm php5-cli php5-pgsql"
+_packages="$_packages php5-fpm php5-cli php5-pgsql php5-mcrypt"
 sysconf_require_packages $_packages
 
 # Fix Nginx

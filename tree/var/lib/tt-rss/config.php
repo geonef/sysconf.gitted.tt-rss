@@ -18,11 +18,10 @@ define('MYSQL_CHARSET', 'UTF8');
 // *** Basic settings (important!) ***
 // ***********************************
 
-$local_config = __DIR__ . '/local.config.php';
+$local_config = '/var/lib/tt-rss/local.config.php';
 if (!file_exists($local_config)) {
     file_put_contents(
-        $local_config, "define('SELF_URL_PATH', 'http://example.org/tt-rss/');");
-
+        $local_config, "<?php\n define('SELF_URL_PATH', 'http://".$_SERVER['SERVER_ADDR']."/');");
 }
 include $local_config;
 // Full URL of your tt-rss installation. This should be set to the
@@ -30,7 +29,7 @@ include $local_config;
 // You need to set this option correctly otherwise several features
 // including PUSH, bookmarklets and browser integration will not work properly.
 
-define('FEED_CRYPT_KEY', '');
+define('FEED_CRYPT_KEY', 'jvAIUW6iQeaKqKYmn7dWE8w6');
 // Key used for encryption of passwords for password-protected feeds
 // in the database. A string of 24 random characters. If left blank, encryption
 // is not used. Requires mcrypt functions.
@@ -85,7 +84,7 @@ define('AUTH_AUTO_CREATE', true);
 // Allow authentication modules to auto-create users in tt-rss internal
 // database when authenticated successfully.
 
-define('AUTH_AUTO_LOGIN', true);
+define('AUTH_AUTO_LOGIN', false);
 // Automatically login user on remote or other kind of externally supplied
 // authentication, otherwise redirect to login form as normal.
 // If set to true, users won't be able to set application language
