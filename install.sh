@@ -42,7 +42,7 @@ www_dir=/var/lib/tt-rss
 url=https://github.com/gothfox/Tiny-Tiny-RSS/archive/1.15.3.tar.gz
 if [ ! -f $www_dir/index.php ]; then
     mkdir -p $www_dir
-    curl $url | tar xzv --strip-components=1 --directory $www_dir \
+    curl -L $url | tar xzv --strip-components=1 --directory $www_dir \
         || nef_fatal "could not download TinyTinyRSS archive: $url"
     cd $www_dir
     chown -R www-data:www-data .
