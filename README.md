@@ -4,13 +4,13 @@ This is a [SYSCONF](https://github.com/geonef/sysconf.base)
 profile. SYSCONF is a method and tool to manage custom system files
 for easy install, backup and sync.
 
-This profile provides a [Tiny Tiny RSS] service. tt-rss is a power,
+This profile provides a [Tiny Tiny RSS](http://tt-rss.org/) service. tt-rss is a power,
 free softwaren, news reader coded in PHP.
 
 ## Services
 
 ```
-\# netstat -tlpn
+# netstat -tlpn
 Active Internet connections (only servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name
 tcp        0      0 127.0.0.1:9000          0.0.0.0:*               LISTEN      21143/php-fpm.conf)
