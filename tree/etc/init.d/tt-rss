@@ -58,8 +58,12 @@ case "${1:-}" in
     ${0:-} stop
     ${0:-} start
     ;;
+
+  status)
+    status_of_proc -p $PIDFILE $TTRSS_UPDATE $TTRSS_NAME && exit 0 || exit $?
+    ;;
   *)
-    echo "Usage: ${0:-} {start|stop|restart|reload|force-reload}" >&2
+    echo "Usage: ${0:-} {start|stop|restart|reload|force-reload|status}" >&2
     exit 1
     ;;
 esac
