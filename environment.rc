@@ -1,4 +1,5 @@
 # Environment for sysconf "sysconf.gitted.ttrss"  -*- shell-script -*-
 
+SYSCONF_GITTED_POSTGRESQL_WITH_COMMON_CONFIG=no
 SYSCONF_GITTED_POSTGRESQL_VERSION=9.1
 SYSCONF_GITTED_POSTGRESQL_DATABASE=postgresql
